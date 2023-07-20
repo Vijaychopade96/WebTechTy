@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CHECK</title>
+</head>
+<body>
+	first input:<input type="text" name="text" id="first">
+	<br><br>
+	second input:<input type="text" name="text" id="second">
+	<br>
+	<br>
+	<button onclick="check()">Submit</button>
+
+	<br>
+	<br>
+	<h1 id="result"></h1>
+
+
+	<script type="text/javascript">
+		function check()
+
+   {
+	var first_v=document.getElementById('first').value;
+    var second_v=document.getElementById('second').value;
+    var result=document.getElementById('result');
+
+    if (first_v==second_v)
+    {
+    	result.innerHTML="CORRECT";
+
+    }
+    else
+    {
+    	result.innerHTML="INCORRECT";
+    }
+}	
+
+</script>
+
+</body>
+</html>

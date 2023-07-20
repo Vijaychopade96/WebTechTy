@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessBox Designining </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-width: 100vw;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        #chess-box
+        {
+            width: 40%;
+            height: auto;
+        }
+        ul{
+            width: 100%;
+            display: flex;
+        }
+        li{
+            flex: 1;
+            height: 3rem;
+            list-style: none;
+            border: .1rem solid #000;
+        }
+    </style>
+</head>  <div id="chess-box"></div>
+<script>
+    for(var i=0;i<8;i++)
+    {
+        var ul = document.createElement('ul');
+        for(var j=0;j<8;j++)
+        {
+            if((i+j)%2 == 0)
+            {
+                var li = document.createElement('li');
+                li.style.backgroundColor = "#000";
+                ul.appendChild(li);
+            }
+            else
+            {
+                var li = document.createElement('li');
+                li.style.backgroundColor = "#fff";
+                ul.appendChild(li);
+            }
+        }
+        document.getElementById("chess-box").appendChild(ul);
+    }
+</script>
+</body>
+</html>
